@@ -70,8 +70,8 @@ fsearch-git
 gcmcore-deb
 geekbench-bin
 git
-gitblade-deb
 git-delta-deb
+gitblade-deb
 gitfiend-deb
 github-cli-deb
 github-desktop
@@ -158,13 +158,15 @@ protonmail-bridge-deb
 renegate
 sed
 shell-color-scripts
+shfmt-bin
 smartgit
 soundux
 spacecadetpinball-git
 spotify-client-deb
 st-distrotube-git
-stellarium
 st-lukesmith-git
+steamtinkerlaunch-git
+stellarium
 surf
 surf-distrotube-git
 suru-icon-theme-git
@@ -182,6 +184,8 @@ tuner-git
 ulauncher-deb
 universal-ctags-git
 uwufetch
+vega-strike-engine-git
+vega-strike-git
 veracrypt-deb
 vim
 viper4linux
@@ -196,8 +200,8 @@ warpinator-deb
 webapp-manager
 webapp-manager-deb
 windscribe-cli-deb
-wine64
 wine-staging-git
+wine64
 yabridge
 yad
 youtube-dl-git
