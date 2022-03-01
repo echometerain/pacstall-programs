@@ -1,23 +1,22 @@
 name="dunst"
 pkgname="dunst"
-url="https://github.com/dunst-project/dunst/archive/refs/tags/v1.6.1.tar.gz"
-version="1.6.1"
-build_depends="libdbus-1-dev libxinerama1 libxrandr2 libxss1 \
-    libxss-dev libgtk-3-dev libnotify-dev"
-gives="dunst dunstctl dunstify"
-breaks=""
+version="1.8.0"
+url="https://github.com/dunst-project/dunst/archive/refs/tags/v${version}.tar.gz"
+build_depends="libdbus-1-dev libxinerama1 libxrandr2 libxss1 libxss-dev libgtk-3-dev libnotify-dev"
+gives="dunst"
 replace="dunst"
 description="A highly configurable and lightweight notification daemon."
-hash="cc7d801575f75e92b18d46ee5d3df80aaf331c88b83ec6caabbecf8636310e13"
+hash="1ec0c7552bb26f4bc24624053f12a022fde128c63952213c40df9d679e0b7a5b"
+maintainer="Henryws <hwengerstickel@pm.me>"
 
 prepare() {
-    true
+  true
 }
 
 build() {
-    make -j$(nproc)
+  make -j"$(nproc)"
 }
 
 install() {
-    sudo make install -j$(nproc) DESTDIR=/usr/src/pacstall/dunst
+  sudo make install -j"$(nproc)" DESTDIR=/usr/src/pacstall/dunst
 }

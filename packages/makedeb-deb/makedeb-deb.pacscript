@@ -1,6 +1,6 @@
 name="makedeb-deb"
-version="6.3.11"
+version="10.0.0"
 url="https://proget.hunterwittenborn.com/debian-feeds/makedeb/main/makedeb/all/makedeb_all_${version}-1.deb"
 description="makedeb takes PKGBUILD files and creates Debian packages installable with APT"
-hash="8dc638d03f6fd317f5653dd02a107057cb4aa8fa81590ad8375ea20691435d2d"
-pacdeps=("makedeb-makepkg-deb")
+hash="48bb61528b70127f42647a487bf7c49e81b392f220fcebce5c64aebb408165c2"
+maintainer="Henryws <hwengerstickel@pm.me>"
