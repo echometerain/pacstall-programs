@@ -1,21 +1,21 @@
 name=an-anime-game-launcher-bin
 pkgname=an-anime-game-launcher
-version=2.1.5
+version=2.2.2
 description="An Launcher for a specific anime game with auto-patching, discord rpc and time tracking"
-url="https://kaifa.ch/an_anime_game_launcher_215.tar.gz"
-hash="440e9c77ce537aebb5e9e5530ad15db0aba1ef8710a019eb7ff73ca79e871e83"
+repology=("project: an-anime-game-launcher")
+url="https://aagl.launcher.moe/dl/an_anime_game_launcher_${version//./}.tar.xz"
+hash="8b741b767cf297f645aacaf1055684bd86b32bb533cde3acfaad67eb3a29b35b"
 maintainer="Marie Piontek <marie@kaifa.ch>"
 gives="${pkgname}"
 breaks="${pkgname} ${pkgname}-deb ${pkgname}-app ${pkgname}-git"
 
-depends="libappindicator3-1 tar unzip xdelta3 cabextract git"
+depends="libayatana-appindicator3-1 tar unzip xdelta3 cabextract git"
 
 optdepends=(
     "mangohud: FPS Hud/GUI"
     "gamemode: Game Optimizations"
-    "switcheroo-control: Hybrid GPU Support"
     "vkbasalt: Required to use custom shaders (install this and reshade-shaders-git)"
-    "reshade-shaders-git: Required by vkBasalt config files (install this and vkbasalt)"
+    #"reshade-shaders-git: Required by vkBasalt config files (install this and vkbasalt)"
 )
 
 prepare() {
@@ -36,4 +36,10 @@ install() {
     sudo install -Dm644 "${SRCDIR}/icon.png" "${STOWDIR}/${name}/usr/share/pixmaps/${pkgname}.png"
     sudo install -Dm755 "${SRCDIR}/an-anime-game-launcher.sh" "${STOWDIR}/${name}/usr/bin/${pkgname}"
     sudo install -Dm644 "${SRCDIR}/an-anime-game-launcher.desktop" -t "${STOWDIR}/${name}/usr/share/applications"
+}
+
+removescript() {
+  if ask "Do you want to delete all launcher files(~/.local/share/anime-game-launcher)? This includes configs and the game" Y; then
+    rm -rf ~/.local/share/anime-game-launcher
+  fi
 }

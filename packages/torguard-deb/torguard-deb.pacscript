@@ -1,7 +1,9 @@
 name="torguard-deb"
 gives="torguard"
-version="4.8.7"
+repology=("project: ${gives}")
+replace="${gives}"
+version="4.8.10"
 url="https://updates.${gives}.biz/Software/Linux/${gives}-v${version}-amd64.deb"
-description="TorGuard VPN Software."
-hash="d07054213182cbf7f271d0d8b1c7bc433228d9781e583c45fce67f63be5d5245"
+description="TorGuard VPN Software"
+hash="da4af31dae8ee2772159fe2eb362e6f546bc97343935bd8d9c81d6c2f902ab36"
 maintainer="WRM-42 <y8bsbahy@anonaddy.me>"

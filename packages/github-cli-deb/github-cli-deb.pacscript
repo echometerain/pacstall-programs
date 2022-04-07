@@ -1,7 +1,10 @@
 name="github-cli-deb"
 gives="gh"
-version="2.5.0"
+breaks="${gives}-bin ${gives}-git"
+replace="${gives}"
+version="2.7.0"
 url="https://github.com/cli/cli/releases/download/v${version}/${gives}_${version}_linux_amd64.deb"
-description="GitHub's official command line tool."
-hash="30acc72047b0172daccbed494c1f95f235a1ff694f516a227028c42283c917da"
+description="GitHub's official command line tool"
+hash="ce393ac41fd97fd27ebdaf81de882150b6d4fc4444afe8f490d74d1312260481"
 maintainer="WRM-42 <y8bsbahy@anonaddy.me>"
+repology=("project: github-cli")
