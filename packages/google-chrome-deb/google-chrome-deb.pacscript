@@ -1,8 +1,9 @@
 name="google-chrome-deb"
 gives="google-chrome-stable"
-breaks="google-chrome-beta-deb ${gives} google-chrome-dev-deb"
-version="98.0.4758.102-1"
+repology=("project: google-chrome" "repo: aur")
+replace="${gives}"
+version="103.0.5060.53-1"
 url="https://dl.google.com/linux/chrome/deb/pool/main/g/${gives}/${gives}_${version}_amd64.deb"
 description="The popular and trusted web browser by Google"
-hash="864ffdeb9402ee82da2786e99c58547598762b281f34a14d8ad670ece654d95d"
+hash="d6bb13aad7c0a2b026b8b36d2e8a74f9bf66fe64610ce12fbbd23b4325699da7"
 maintainer="Korkmatik <9c54efc1-143b-4f5f-9d2f-f6f189583f0f@aleeas.com>"

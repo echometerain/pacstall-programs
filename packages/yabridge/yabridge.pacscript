@@ -1,37 +1,27 @@
 name="yabridge"
-version="3.8.1"
+version="4.0.2"
 url="https://github.com/robbert-vdh/yabridge/releases/download/${version}/yabridge-${version}.tar.gz"
 build_depends="libxcb1 libxcb1:i386"
 description="A modern and transparent way to use Windows VST2 and VST3 plugins on Linux."
-hash="3e19e8a4936f7611ca06b415a0fb0a9e336b38a3d3d99f33304aa48301e7ba84"
+hash="e9b66d48339cec5f3cc929d1da37d73c78c04d98281d051a2cbbe20dfb8f9eba"
 optdepends=("wine: 32-bit windows emulator"
   "wine64: 64-bit windows emulator")
 maintainer="echometerain <echometer@disroot.org>"
-prepare() {
-  sudo install -D ./* -t "${STOWDIR}/${name}/usr/lib/yabridge"
-}
 repology=("project: yabridge")
+
+prepare() {
+  true
+}
 
 build() {
   true
 }
 
 install() {
-  sudo ln -sf "${STOWDIR}/${name}/usr/lib/yabridge/yabridgectl" "/usr/bin"
-  sudo ln -sf "${STOWDIR}/${name}/usr/lib/yabridge/yabridge-host.exe" "/usr/bin"
-  sudo ln -sf "${STOWDIR}/${name}/usr/lib/yabridge/yabridge-host.exe.so" "/usr/bin"
-  sudo ln -sf "${STOWDIR}/${name}/usr/lib/yabridge/yabridge-host-32.exe" "/usr/bin"
-  sudo ln -sf "${STOWDIR}/${name}/usr/lib/yabridge/yabridge-host-32.exe.so" "/usr/bin"
-}
+  sudo install -dm755 "$pkgdir/usr/bin"
+  sudo install yabridgectl "$pkgdir/usr/bin"
+  sudo install yabridge-host{,-32}.exe{,.so} "$pkgdir/usr/bin"
 
-postinst() {
-  yabridgectl set --path="/usr/lib/yabridge"
-}
-
-removescript() {
-  sudo rm "/usr/bin/yabridgectl"
-  sudo rm "/usr/bin/yabridge-host.exe"
-  sudo rm "/usr/bin/yabridge-host.exe.so"
-  sudo rm "/usr/bin/yabridge-host-32.exe"
-  sudo rm "/usr/bin/yabridge-host-32.exe.so"
+  sudo install -dm755 "$pkgdir/usr/lib"
+  sudo install libyabridge{,-chainloader}-{vst2,vst3}.so "$pkgdir/usr/lib"
 }

@@ -1,8 +1,0 @@
-name="gcmcore-deb"
-gives="gcmcore"
-version="2.0.632"
-depends="git"
-url="https://github.com/GitCredentialManager/git-credential-manager/releases/download/v${version}/${gives}-linux_amd64.${version}.34631.deb"
-description="Secure, cross-platform Git credential storage with authentication to GitHub, Azure Repos, and other popular Git hosting services."
-hash="41d116b3e4b62099a41d7de21f815724cefa8d386af767695da8ef0ac8b4aa33"
-maintainer="WRM-42 <y8bsbahy@anonaddy.me>"

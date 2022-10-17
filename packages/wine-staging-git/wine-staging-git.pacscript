@@ -34,18 +34,16 @@ optdepends=("libcapi20-dev: for ISDN software"
 maintainer="echometerain <echometer@disroot.org>"
 
 pkgver() {
-    git ls-remote "${url}" master | cut -f1
+    git ls-remote "${url}" master | cut -f1 | cut -c1-8
 }
 version="$(pkgver)"
 
 prepare() {
-        export CFLAGS="${CFLAGS/-fno-plt/}"
-        export LDFLAGS="${LDFLAGS/,-z,now/}"
+        export CFLAGS="${CFLAGS:-/-fno-plt/}"
+        export LDFLAGS="${LDFLAGS:-/,-z,now/}"
         export PKG_CONFIG_PATH="/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/i386-linux-gnu/pkgconfig:/usr/lib32/pkgconfig"
         mkdir "wine64-build"
         mkdir "wine32-build"
-        wget "http://mirrors.kernel.org/ubuntu/pool/universe/j/jxrlib/libjxr-dev_1.1-6build1_i386.deb"
-        sudo dpkg -i "libjxr-dev_1.1-6build1_i386.deb"
 }
 
 build() {

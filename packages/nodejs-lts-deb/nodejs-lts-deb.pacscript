@@ -1,13 +1,12 @@
 name="nodejs-lts-deb"
 pkgname="nodejs"
 _major_version="16"
-version="${_major_version}.14.2"
+version="${_major_version}.16.0"
 breaks="${pkgname} ${pkgname}-git ${pkgname}-bin ${pkgname}-app"
 replace="${pkgname} node"
-depends="libc6 libgcc1 libstdc++6 python3-minimal ca-certificates"
 gives="${pkgname}"
-description="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine."
+description="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine"
 maintainer="Paul Cosma (saenai) <paul.cosma97@gmail.com>"
-hash="b0004a3bba73320caa4d675cf5556a6bf439f93445395256ceab77e055ad0d06"
+hash="7bbe3c301b233b9509c26c16e1d25c714f3764fb9bac220217d63be2fe134947"
 url="https://deb.nodesource.com/node_${_major_version}.x/pool/main/n/nodejs/nodejs_${version}-deb-1nodesource1_amd64.deb"
-repology=("project: nodejs" "visiblename: nodejs-lts-gallium")
+repology=("project: nodejs" "repo: centos_stream_9")

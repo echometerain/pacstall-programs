@@ -1,9 +1,9 @@
 name="zotero"
-version="5.0.96.3"
 repology=("project: zotero" "repo: aur")
+version="6.0.15"
 url="https://download.zotero.org/client/release/${version}/Zotero-${version}_linux-x86_64.tar.bz2"
 description="Your personal research assistant"
-hash="7aa48dce6906368a4627b541caf51f7c510f273dd61d2edbe7e8e05005bf854e"
+hash="87f8726918ee9d5915a07995a6bbb8f3582837bdc09e8d530d10c3839015a132"
 maintainer="JonBoyleCoding <programmerfalcon@gmail.com>"
 
 prepare() {
@@ -18,8 +18,11 @@ build() {
 }
 
 install() {
-  sudo install -D zotero.desktop -t /usr/src/pacstall/${name}/usr/share/applications
-  installdir=/usr/src/pacstall/${name}/opt/zotero
+  pkgdir="${STOWDIR}/${name}"
+
+  sudo install -D zotero.desktop -t "${pkgdir}/usr/share/applications"
+
+  installdir="${pkgdir}/opt/zotero"
   sudo mkdir -p "${installdir}"
   sudo cp -r ./ "${installdir}"
 }

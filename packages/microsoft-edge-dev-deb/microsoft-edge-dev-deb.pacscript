@@ -1,8 +1,9 @@
 name="microsoft-edge-dev-deb"
 gives="microsoft-edge-dev"
-breaks="microsoft-edge-stable-deb microsoft-edge-beta-deb"
-version="100.0.1181.0-1"
+replace="${gives}"
+repology=("project: ${gives}")
+version="104.0.1293.1-1"
 url="https://packages.microsoft.com/repos/edge/pool/main/m/${gives}/${gives}_${version}_amd64.deb"
-description="A development build of Edge that contains the latest experimental features maintained by Microsoft. May be unstable"
-hash="e607729c5b6f189aec060415bbe2530e3a2d89ce8882961d8b3a005bac61dc9b"
+description="The web browser from Microsoft - Developer channel"
+hash="cd6f30f76aa60e3bc08cfaa74c5d1ce58498f4b05868814b0d84738d67f90de5"
 maintainer="WRM-42 <y8bsbahy@anonaddy.me>"

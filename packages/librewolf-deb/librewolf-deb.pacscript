@@ -1,0 +1,10 @@
+name="librewolf-deb"
+gives="librewolf"
+version="105.0.3-1"
+replace="${gives}"
+url="https://deb.librewolf.net/pool/focal/main/libr/librewolf/librewolf_${version}_all.deb"
+description="A fork of Firefox, focused on privacy, security and freedom"
+breaks="${pkgname}-app ${pkgname}-bin ${pkgname}-git"
+hash="03afebe2295f17c27fbb513ca65de4391b83ca4a83592d9107ecffa68a6956ae"
+repology=("project: librewolf")
+maintainer="Lanius <laniusone@pm.me>"

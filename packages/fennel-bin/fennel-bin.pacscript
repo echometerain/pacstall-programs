@@ -9,11 +9,11 @@ maintainer="wizard-28 <wiz28@pm.me>"
 name="fennel-bin"
 pkgname="fennel"
 pkgdir="${STOWDIR}/${name}"
-version="1.0.0"
+version="1.2.0"
 description="A Lua Lisp language"
 url="https://fennel-lang.org/downloads/fennel-${version}-x86_64"
 breaks="${pkgname} ${pkgname}-git ${pkgname}-deb ${pkgname}-app"
-hash="4b5871bb0c1ceb50dac6ada0b2e60a04f775eee15f8056c01b2ece5938c3046b"
+hash="f813d7a4e23b0d1a09c5087f76828ef29cba38d8446041d292cac43cbd6a7449"
 repology=("project: fennel")
 
 prepare() {

@@ -1,8 +1,9 @@
 name="google-chrome-beta-deb"
 gives="google-chrome-beta"
-breaks="google-chrome-deb google-chrome-dev-deb"
-version="99.0.4844.51-1"
+repology=("project: google-chrome" "visiblename: ${gives}")
+replace="${gives}"
+version="103.0.5060.53-1"
 url="https://dl.google.com/linux/chrome/deb/pool/main/g/${gives}/${gives}_${version}_amd64.deb"
 description="The web browser built by Google - Beta channel"
-hash="f326f1184f3d1b535c6fbfe50a09cbda28ed370856861639509924d707e85ead"
+hash="446246092d92d4b460837e6e8748a2cdc00b37eaaa081f6a3dcae4672d847f07"
 maintainer="WRM-42 <y8bsbahy@anonaddy.me>"

@@ -1,8 +1,9 @@
 name="mullvad-vpn-beta-deb"
 gives="mullvad-vpn"
-breaks="mullvad-vpn-deb"
-version="2022.1-beta2"
+repology=("project: ${gives}")
+breaks="${gives}-deb"
+version="2022.3-beta3"
 url="https://github.com/mullvad/mullvadvpn-app/releases/download/${version}/MullvadVPN-${version}_amd64.deb"
 description="The Mullvad VPN client app for desktop - Beta channel"
-hash="7dd86648960f7ee083b3388332d0cafd0cc58a41c16787eb1e37a0c010651ffb"
+hash="87208405207d9018c823a232aec53a4b473b761337ba4ae2c741fc2138ffe93e"
 maintainer="WRM-42 <y8bsbahy@anonaddy.me>"

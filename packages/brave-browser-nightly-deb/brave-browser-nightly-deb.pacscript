@@ -1,10 +1,10 @@
 name="brave-browser-nightly-deb"
-version="1.39.36"
+version="1.46.60"
 gives="brave-browser-nightly"
 breaks="${gives}-bin ${gives}-app ${gives}-git"
 replace="${gives}"
 url="https://github.com/brave/brave-browser/releases/download/v${version}/${gives}_${version}_amd64.deb"
-description="The Brave browser is a fast, private and secure web browser for PC, Mac and mobile. This is the nightly build of Brave Browser"
-hash="0c77981bb487d8a812195f4151ae018fdf80e218c8d996e4c647397ff778ffa6"
+description="The Brave browser is a fast, private and secure web browser for PC, Mac and mobile - Nightly channel"
+hash="9475f096c2e50ba35f1ea0ea15125923e1949175108ab7d852c0b729ff34c58a"
 repology=("project: brave" "visiblename: brave-nightly")
 maintainer="TwilightBlood <hwengerstickel@pm.me>"
